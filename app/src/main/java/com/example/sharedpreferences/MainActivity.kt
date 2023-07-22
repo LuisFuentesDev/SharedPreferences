@@ -11,5 +11,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btGuardar.setOnClickListener {
+            val texto = binding.etTexto.text.toString()
+            val entero = binding.etEntero.text.toString().toInt()
+            val decimal = binding.etDecimal.text.toString().toDouble()
+            val switch = binding.switch1.isChecked
+        }
     }
 }
